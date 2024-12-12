@@ -23,7 +23,6 @@ export const Logged = async(JWT) => {
 
     const data = await fetchDatas2('https://zone01normandie.org/api/graphql-engine/v1/graphql', `Bearer ${JWT}`, query)
     
-    console.log(data)
     const currentDate = new Date()
     const currentEvents = getCurrentEvent(data.data.event, currentDate)
     const auditReceved = AuditReceived(data.data.audit, data.data.user[0].login)
@@ -65,7 +64,7 @@ export const Logged = async(JWT) => {
         </div>
         
         <div class="body">
-            <div class="hello">Welcome, ${data.data.user[0].attrs.firstName} ${data.data.user[0].attrs.lastName}!</div>
+            <div class="hello">Welcome, ${data.data.user[0].attrs["0"]} ${data.data.user[0].attrs["1"]}!</div>
             <div class="allData" id="allData">
                 <div class="reverse">
                     <div></div>
@@ -170,16 +169,15 @@ export const Logged = async(JWT) => {
         barRatioReceived.style.width = `${auditRatioReceived*100/auditRatioDone / 2}%`
     } else {
         barRatioReceived.style.width = '50%'
-        barRatioDone.style.width = `${auditRatioDone*100/auditRatioReceived / 2}%`
+        barRatioDone.style.width = `${auditRatioDone*100/auditRatioReceived / 2}`
     }
 
     const exercicesName = document.getElementsByClassName('fourExercices')[0]
-    console.log(fourLastProject)
     for (let i = 0; i < fourLastProject.length; i++) {
         const div = document.createElement('div')
         div.className = `exercices${i+1}`
 
-        div.innerHTML = `${fourLastProject[i].object.type} — ${fourLastProject[i].path.split("/")[3]}  ${getNextLevelRounded(fourLastProject[i].amount, 1)}`
+        div.innerHTML = `${fourLastProject[i].object.type} — ${fourLastProject[i].object.name}  ${getNextLevelRounded(fourLastProject[i].amount, 1)}`
 
         exercicesName.appendChild(div)
     }
