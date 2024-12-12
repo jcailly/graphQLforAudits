@@ -1,30 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <title>Login</title>
-        <link rel="stylesheet" href="style/style.css" />
+      <title>Zone 01</title>
+      <link crossorigin="anonymous" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIACQAAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAFdJREFUeJxjYBgS4MNuhv+UaD5LtAEgheiKkcWwyePVjCR+Fq86PJrroHJ1ONXjcxY+/8P1ETAAxfkkuQKX83G6Gl0Ql/OJjglCUUoQ4PM/0QaQrZmuAAC5uJIBPxyiUwAAAABJRU5ErkJggg==" rel="icon" type="image/x-icon"></link>
+      <script type="module" src="js/pageHandler/index.js"></script>
     </head>
+
     <body>
-        <button id="logoutButton">LogOut</button>
-        <form id="loginForm">
-            <h1 id="titre1">GraphQL</h1>
-            <h3 id="titre3">Connecte-toi pour voir tes stats</h3>
-            <label for="username">Username:</label><br />
-            <input type="text" id="username" name="username" /><br />
-            <label id="pwd" for="password">Password:</label><br />
-            <input type="password" id="password" name="password" /><br />
-            <input type="submit" value="Submit" />
-        </form>
-        <div id="error"></div>
-        <div id="userContainer">
-            <div id="userinfos"></div>
-            <div id="userstats"></div>
+      <div class="trame"></div>        
+      <div class="logo"></div>
+
+      <div class="page-container">
+          <div id="welcome" class="title welcome">Bienvenue à <span style="color:rgb(16,110,250);">Zone01</span>&thinsp;!</div>
+        
+          <div class="blocks-container">
+            <div class="left">
+              <div class="text">
+                <h2>Démarre la première étape de <br>l’inscription – Les jeux cognitifs.</h2>
+                <br />
+                <span id="zone-01-process">C'est un jeu en deux parties qui défie ta mémoire et ta logique.</span>
+                <br /><br />
+                1)
+                <span id="instruction-1">Prépare-toi pour le test en ligne d'1h30.</span>
+                <br />
+                2) <span id="instruction-2">Crée un compte et connecte-toi à la plateforme.</span>
+                <br />
+                3) <span id="instruction-3">Complète le test - rappelle-toi, tu ne peux pas faire pause !</span>
+                <br />
+                4) <span id="instruction-4">Tu obtiendras tes résultats directement depuis la plateforme.</span>
+                <br />
+                <br />
+        
+                <h2>Bonne chance !</h2>
+                <br />
+                <span>En cas de succès aux jeux cognitifs, la plateforme t'informera des prochaines étapes.</span>
+                <br />
+                <span>Sinon, tu as 1 essai supplémentaire pour faire de ton mieux !</span>
+                <br />
+                <span>C'est tout ! Si tu as déjà créé un compte, connecte-toi pour compléter ta candidature.</span>
+                <br />
+                <br />
+                <span id="account"> La sélection pour la prochaine piscine du <span style="color: rgb(16,110,250);">5 juillet </span>
+                a déjà commencé, tu as jusqu'au <span style="color: rgb(16,110,250);"> 2 juillet </span>pour t'inscrire ! </span>
+                <br />
+                <br />
+                <span>Une piscine pour les post-bacheliers <span style="font-weight: bold">uniquement</span> sera disponible le <span style="color: rgb(16,110,250);">5 juillet</span>.</span>
+                <br />
+                <br />
+                <h2>Grande Nouvelle pour Caen !</h2>
+                <br />
+                <span>Zone01 étend ses activités à Caen avec une première piscine le <span style="color: rgb(16,110,250);">5 juillet !</span></span>
+                <br />
+                <span>C’est l'occasion parfaite pour ceux qui trouvent Rouen un peu loin.</span>
+                <br />
+                <br />
+                <h4>Pourquoi participer ?</h4>
+                <br />
+                <span>La Piscine est une phase d'immersion de 26 jours sans engagement pour découvrir le numérique et si le métier de développeur.se est fait pour toi.</span>
+                <br />
+                <span>C'est aussi l'opportunité de lancer ta carrière avec <span style="color: rgb(16,110,250);">Zone01 !</span></span>
+                <br />
+                <br />
+                <h2>Veux-tu en savoir plus sur Zone01 Rouen ?</h2>
+                <br />
+                <span>Suis-nous sur nos <a href="https://linktr.ee/zone01rouen" target="_blank" style="color: hsl(216, 96%, 52%)">réseaux sociaux</a> et consulte notre <a href="https://zone01rouennormandie.org/" target="_blank" style="color: hsl(216, 96%, 52%)">site web</a>.</span>
+              </div>
+              <div class="contact">
+                <a id="contact-link">
+                  <span class="arrow">→</span>
+                  <span id="contact">Nous contacter.</span>
+                </a>
+              </div>
+            </div>
+        
+            <div class="right" style="justify-content: normal!important">
+              <iframe width="720" height="340" src="https://www.youtube.com/embed/nBFEsXr5A4A" title="Zone01 Presentation" frameborder="0" allowfullscreen style="margin-bottom: 100px"></iframe>
+              <div id="cas-sign-in-wrapper" class="cas-sign-in-wrapper">
+                <button class="sign-in-button">se connecter</button>
+              </div>
+
+              <div id="authenticate" class="authenticate">
+                <div id="login-form">
+                  <div class="login">
+                    <li class="login-register">
+                      <label id="email-label" for="email-field">Email ou Nom d'utilisateur</label>
+                      <input type="text" id="email-field" name="email" required />
+                    </li>
+
+                    <li id="password-wrap" class="password">
+                      <label for="password-field">Mot de passe</label>
+      
+                      <div class="password-container">
+                        <input type="password" id="password-field" name="password" minlength="6" autocomplete="new-password"
+                          title="Le mot de passe ne répond pas aux exigences" required />
+                      </div>
+                    </li>
+                  </div>
+                  <p id="error-message" class="error-message"></p>
+                  <div id="buttons">
+                    <button type="submit" class="authenticate-button" id="authenticate-button">Se connecter</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <script src="login.js"></script>
-        <svg id="graphUp" width="700" height="400"></svg>
-        <svg id="graphDown" width="700" height="400"></svg>
-        <svg id="graphXp" width="700" height="400"></svg>
-        <button id="logoutButton" style="display: none">Logout</button>
     </body>
 </html>

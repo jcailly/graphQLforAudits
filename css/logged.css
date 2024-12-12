@@ -1,0 +1,874 @@
+html {
+    background-color: #1a191c;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    hyphens: auto;
+}
+
+.trame {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    background: center / cover url(https://zone01normandie.org/assets/img/01-trame.svg);
+}
+
+.navBar {
+    display: flex;
+
+    width: 100%;
+    height: 100px;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    position: fixed;
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+    background: rgb(25, 25, 25);
+}
+
+.navBar .logo {
+    width: 130px;
+    height: 50px;
+    background: center / cover url(https://zone01normandie.org/assets/img/logo.png);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.navBar .link0 {
+    position: absolute;
+    top: 45px;
+    left: 200px;
+
+    width: fit-content;
+}
+
+.navBar .link1 {
+    position: absolute;
+    top: 45px;
+    left: 260px;
+
+    width: fit-content;
+}
+
+.navBar .link2 {
+    position: absolute;
+    top: 45px;
+    left: 290px;
+
+    width: fit-content;
+}
+
+.navBar .link3 {
+    position: absolute;
+    top: 45px;
+    left: 365px;
+
+    width: fit-content;
+}
+
+.navBar .link4 {
+    position: absolute;
+    top: 45px;
+    left: 395px;
+
+    width: fit-content;
+}
+
+.navBar .profile {
+    position: absolute;
+
+    background: url(../svg/profile.svg);
+
+    fill: white;
+
+    background-size: 100%;
+
+    width: 40px;
+    height: 40px;
+
+    top: 32.5px;
+    left: 88.5vw; 
+
+    cursor: pointer;
+}
+
+.navBar .userName {
+    position: absolute;
+
+    top: 45px;
+    left: 91vw;
+
+    cursor: pointer;
+}
+
+.navBar .giteaSVG {
+    position: absolute;
+    
+    background: url(../svg/git.svg);
+    
+    fill: white;
+    
+    background-size: 100%;
+    
+    width: 40px;
+    height: 40px;
+    
+    top: 32.5px;
+    left: 81vw; 
+    
+    cursor: pointer;
+}
+
+.navBar .gitea {
+    position: absolute;
+
+    top: 45px;
+    left: 84vw;
+
+    cursor: pointer;
+}
+
+.navBar .logout {
+    position: absolute;
+
+    background: url(../svg/logout.svg);
+
+    width: 60px;
+    height: 60px;
+
+    top: 22.5px;
+    left: 96vw;
+
+    cursor: pointer;
+}
+
+.body {
+    position: relative;
+
+    width: 90%;
+
+    margin: 0 auto 2% auto;
+
+    font-size: 40px;
+    font-weight: bolder;
+
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.body .hello {
+    grid-column: 1 / 4;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.body .allData {
+    grid-column: 4;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.allData .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.reverse div {
+    width: 60px;
+    height: 60px;
+    background: url(../svg/profileData.svg);
+    background-size: 100%;
+
+    cursor: pointer;
+}
+
+.body .container_current_rank {
+    grid-column: 1;
+    grid-row: 2/4;
+
+    background-color: #E8E1F0;
+    text-align: center;
+    color: #333333;
+
+    font-size: 18px;
+    font-weight: lighter;
+
+    padding: 10%;
+}
+
+.container_current_rank .currentRankSpan {
+    font-size: 15px;
+    margin-bottom: 5%;
+}
+
+.container_current_rank .currentRank {
+    font-weight: normal;
+    margin-bottom: 5%;
+}
+
+.container_current_rank .line {
+    background-color: black;
+    height: 1px;
+}
+
+.container_current_rank .nextRank {
+    font-size: 15px;
+    margin-bottom: 5%;
+}
+
+.container_current_rank .circle {
+    background: rgba(0,0,0,0.05);
+    border-radius: 50%;
+
+    width: 50%;
+    position: relative;
+
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.15);
+
+    left: 50%;
+    transform: translate(-50%);
+
+    margin-bottom: 10%;
+}
+
+.container_current_rank .circle .levelSpan {
+    font-size: 15px;
+    margin-bottom: 5%;
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+    transform: translate(-50%);
+}
+
+.container_current_rank .circle .level {
+    font-size: 40px;
+    margin-bottom: 5%;
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.container_current_rank .nextLevel {
+    font-size: 15px;
+}
+
+.body .WhatUp {
+    grid-column: 2/4;
+    grid-row: 2;
+
+    background: #272529;
+    position: relative;
+}
+
+.WhatUp .what {
+    color: #CAADFF;
+    
+    font-weight: 300;
+    font-size: 70px;
+
+    margin: 1% 0 0 2%;
+}
+
+.resume {
+    font-weight: lighter;
+    font-size: 20px;
+    
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+    width: 90%;
+}
+
+.resume .arrow {
+    color: #CAADFF;
+    font-size: 30px;
+    
+    position: relative;
+    top: 3px;
+
+    margin-right: 10%;
+}
+
+.resume .resumeExercice {
+    position: relative;
+    left: -7%;
+}
+
+.body .activity {
+    grid-column: 4;
+    grid-row: 2;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.activity .currentlySpan {
+    font-size: 15px;
+    color: lightgrey;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.activity .finished {
+    font-size: 15px;
+    color: darkgrey;
+
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+}
+
+.finished .exerciceName {
+    color: grey;
+}
+
+.activity .inactiveCircle {
+    background: orange;
+    position: absolute;
+
+    top: 10%;
+    right: 5%;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+}
+
+.activity .inactive {
+    color: orange;
+    position: absolute;
+
+    top: 40%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.activity .activeCircle {
+    background: greenyellow;
+    position: absolute;
+
+    top: 10%;
+    right: 5%;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+}
+
+.activity .active {
+    color: greenyellow;
+    position: absolute;
+
+    top: 40%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.body .divRatio {
+    grid-column: 2;
+    grid-row: 3;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.divRatio .ratioSpan {
+    font-size: 20px;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    color: lightgrey;
+}
+
+.divRatio .barRatioDone,
+.divRatio .barRatioReceived {
+    background: lightgrey;
+    height: 5px;
+
+    position: absolute;
+    left: 5%;
+}
+
+.divRatio .barRatioDone {
+    top: 25%;
+}
+
+.divRatio .barRatioReceived {
+    top: 45%;
+}
+
+.divRatio .amountRatioReceived,
+.divRatio .amountRatioDone {
+    font-size: 13px;
+
+    position: absolute;
+
+    right: 5%;
+    width: 20%;
+
+    color: grey;
+}
+
+.divRatio .amountRatioDone {
+    top: 18%;
+}
+
+.divRatio .amountRatioReceived {
+    top: 38%;
+}
+
+.divRatio .ratio {
+    font-size: 70px;
+    font-weight: lighter;
+
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.ratio .ratioComment {
+    font-size: 20px;
+}
+
+.body .xp {
+    grid-column: 3/5;
+    grid-row: 3;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.xp .xpAmount {
+    font-size: 60px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.xp .lastActivitySpan {
+    font-size: 12px;
+    font-weight: lighter;
+
+    color: white;
+
+    position: absolute;
+    left: 5%;
+    top: 48%;
+}
+
+.xp .line {
+    height: 1px;
+    width: 90%;
+
+    background: grey;
+
+    position: absolute;
+    left: 5%;
+    top: 60%;
+}
+
+.xp .fourExercices {
+    font-size: 11px;
+    font-weight: lighter;
+
+    position: relative;
+    margin: 0 5%;
+
+    height: 25%;
+
+    top: 65%;
+}
+
+.fourExercices .exercices1 {
+    position: absolute;
+}
+
+.fourExercices .exercices2 {
+    position: absolute;
+    right: 5%;
+}
+
+.fourExercices .exercices3 {
+    position: absolute;
+    bottom: 5%;
+}
+
+.fourExercices .exercices4 {
+    position: absolute;
+
+    right: 5%;
+    bottom: 5%;
+}
+
+.body .currentAudit {
+    grid-column: 1/3;
+    grid-row: 4;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.currentAudit .currentAuditTitle {
+    font-size: 25px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+
+.currentAudit .currentAuditTodo {
+    position: absolute;
+    
+    left: 2%;
+    top: 35%;
+    width: 95%;
+}
+
+.currentAuditTodo .noAudit {
+    font-weight: lighter;
+    font-size: 20px;
+    color: #00d19f;
+}
+
+.currentAuditTodo .Audit {
+    display: inline;
+    justify-content: space-between;
+}
+
+.Audit .text {
+    display: inline;
+    vertical-align: middle;
+
+    font-weight: lighter;
+    font-size: 15px;
+    color: lightgrey;
+}
+
+.text .exerciceName {
+    color: white;
+    font-size: 18px;
+}
+
+.Audit .auditCode {
+    display: inline;
+    vertical-align: middle;
+    
+    float: right;
+    border: 1px solid #CAADFF;
+    color: #CAADFF;
+
+    font-size: 15px;
+    padding: 1% 4%;
+}
+
+
+.body .XPprogression {
+    grid-column: 3/5;
+    grid-row: 4/6;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.XPprogression .title {
+    font-size: 20px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+
+.XPprogression .totalXP {
+    font-size: 12px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.XPprogression .svg {
+    width: 80%;
+    height: 80%;
+
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+
+.body .bestSkills {
+    grid-column: 1/3;
+    grid-row: 5/7;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.bestSkills .title {
+    font-size: 17px;
+    font-weight: lighter;
+    
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
+.bestSkills .description {
+    font-size: 14px;
+    font-weight: lighter;
+    
+    color: grey;
+
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.bestSkills .svg {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.body .usersByXP {
+    grid-column: 3/5;
+    grid-row: 6/8;
+
+    background: #272529;
+
+    position: relative;
+}
+
+.usersByXP .userByXPtitle {
+    font-size: 20px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
+.usersByXP .svg {
+    position: absolute;
+
+    top: 15%;
+    left: 10%;
+
+    width: 80%;
+    height: 100%;
+
+    transform: scale(1, 0.5);
+}
+
+.usersByXP .description {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.usersByXP .level {
+    position: absolute;
+    top: 88%;
+    left: 92%;
+
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.body .calendar {
+    grid-column: 1;
+    grid-row: 7;
+
+    background: #E8E1F0;
+
+    position: relative;
+}
+
+.calendar .display {
+    color: black;
+    font-weight: lighter;
+    
+    font-size: 16px;
+
+    display: flex;
+    
+    position: relative;
+    top: 5%;
+    left: 5%;
+}
+
+.display .date {
+    color: #7538FF;
+
+    font-size: 64px;
+}
+
+.align .day {
+    position: absolute;
+    top: 15%;
+}
+
+.align .month {
+    position: absolute;
+    top: 60%;
+}
+
+.calendar .event {
+    width: 100%;
+    height: 40%;
+
+    position: absolute;
+    bottom: 0;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.event .eventContainer {
+    position: absolute;
+    left: 5%;
+}
+
+.eventContainer .nameEvent {
+    font-size: 20px;
+    margin-bottom: 5%;
+    
+    color: rgb(66, 66, 66);
+}
+
+.eventContainer .startedDate,
+.eventContainer .endDate {
+    font-size: 15px;
+
+    color: rgb(66, 66, 66);
+}
+
+.event .NoEvent {
+    font-size: 15px;
+    color: rgb(66, 66, 66);
+
+
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: center;
+}
+
+body .popup {
+    background: #222024;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 100%;
+
+    z-index: 1000;
+
+    box-shadow: -15px 0px 25px rgba(0, 0, 0, 0.25);
+
+    padding: 3%;
+}
+
+.popup .name {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.popup .closeBtn {
+    position: absolute;
+    right: 10%;
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+}
+
+.popup .userName {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.popup .MoreAboutYou {
+    font-size: 20px;
+    width: 95%;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.MoreAboutYou .alignRight {
+    float: right;
+}
+
+.popup .InformationAboutYou,
+.popup .AdditionalInformation,
+.popup .MedicalInformation {
+    width: 80%;
+    margin: 0 auto;
+
+    font-size: 15px;
+
+    max-width: 98%;
+}
+
+.InformationAboutYou .alignRight,
+.AdditionalInformation .alignRight,
+.MedicalInformation .alignRight {
+    position: absolute;
+
+    right: 10%;
+}
