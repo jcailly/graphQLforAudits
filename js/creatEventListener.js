@@ -63,15 +63,15 @@ const AllDataClick = (data) => {
         if (more.innerHTML !== '') {
             more.innerHTML = ''
         } else {
-            const Birthday = new Date(Date.parse(data.data.user[0].attrs[5]))
+            const Birthday = new Date(Date.parse(data.data.user[0].attrs.dateOfBirth))
 
             more.innerHTML = `
-                <div>Last name: <span class="alignRight">${data.data.user[0].attrs[1]}</div>
-                <div>First name: <span class="alignRight">${data.data.user[0].attrs[0]}</span></div>
+                <div>Last name: <span class="alignRight">${data.data.user[0].attrs.lastName}</div>
+                <div>First name: <span class="alignRight">${data.data.user[0].attrs.firstName}</span></div>
                 <br>
-                <div>Phone: <span class="alignRight">${data.data.user[0].attrs[2]}</span></div>
-                <div>Gender: <span class="alignRight">${data.data.user[0].attrs[3]}</span></div>
-                <div>Country: <span class="alignRight">${data.data.user[0].attrs[4]}</span></div>
+                <div>Phone: <span class="alignRight">${data.data.user[0].attrs.Phone}</span></div>
+                <div>Gender: <span class="alignRight">${data.data.user[0].attrs.gender}</span></div>
+                <div>Country: <span class="alignRight">${data.data.user[0].attrs.country}</span></div>
                 <div>Birthday: <span class="alignRight">${Birthday.getDate().toString().length === 1 ? "0"+Birthday.getDate() : Birthday.getDate()} / ${(Birthday.getMonth() + 1).toString().length === 1 ? "0"+(Birthday.getMonth() + 1) : (Birthday.getMonth() + 1)} / ${Birthday.getFullYear()}</span></div>
             `
         }
@@ -83,7 +83,7 @@ const AllDataClick = (data) => {
         if (additional.innerHTML !== '') {
             additional.innerHTML = ''
         } else {
-            const Birthday = new Date(Date.parse(data.data.user[0].attrs[5]))
+            const Birthday = new Date(Date.parse(data.data.user[0].attrs.dateOfBirth))
 
             additional.innerHTML = `
                 <div>Birthday: <span class="alignRight">${Birthday.getDate().toString().length === 1 ? "0"+Birthday.getDate() : Birthday.getDate()} / ${(Birthday.getMonth() + 1).toString().length === 1 ? "0"+(Birthday.getMonth() + 1) : (Birthday.getMonth() + 1)} / ${Birthday.getFullYear()}</span></div>
@@ -92,7 +92,7 @@ const AllDataClick = (data) => {
                 <div>complement street: <span class="alignRight">${data.data.user[0].attrs.addressComplementStreet}</span></div>
                 <div>Postal code: <span class="alignRight">${data.data.user[0].attrs.addressPostalCode}</span></div>
                 <div>City: <span class="alignRight">${data.data.user[0].attrs.addressCity}</span></div>
-                <div>Country: <span class="alignRight">${data.data.user[0].attrs[4]}</span></div>
+                <div>Country: <span class="alignRight">${data.data.user[0].attrs.country}</span></div>
                 <br>
                 <div>Your expectations and objectives for the training: ${data.data.user[0].attrs.attentes}</div>
             `
