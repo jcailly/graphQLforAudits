@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login</title>
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <button id="logoutButton">LogOut</button>
+        <form id="loginForm">
+            <h1 id="titre1">GraphQL</h1>
+            <h3 id="titre3">Connecte-toi pour voir tes stats</h3>
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" /><br />
+            <label id="pwd" for="password">Password:</label><br />
+            <input type="password" id="password" name="password" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+        <div id="error"></div>
+        <div id="userContainer">
+            <div id="userinfos"></div>
+            <div id="userstats"></div>
+        </div>
+        <script src="login.js"></script>
+        <svg id="graphUp" width="700" height="400"></svg>
+        <svg id="graphDown" width="700" height="400"></svg>
+        <svg id="graphXp" width="700" height="400"></svg>
+        <button id="logoutButton" style="display: none">Logout</button>
+    </body>
+</html>
